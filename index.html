@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="pictures/profile_pic.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>My Portfolio</title>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <div class="profile-pic" id="profilePic">
+            <img src="pictures/profile_pic.png" alt="profile" class="default">
+            <img src="pictures/profile_pic_hover.png" alt="profile hover" class="hover">
+            <img src="pictures/joshua.png" alt="profile click" class="click">
+        </div>
+
+        <div class="header-info">
+            <h1>Junio, Ian Christopher L.</h1>
+            <p><i class="fa-solid fa-location-dot"></i> Malasiqui, Pangasinan</p>
+            <p>“Aspiring Cybersecurity Specialist | Passionate about Network Security & Ethical Hacking”</p>
+
+<hr>
+            <div class="email-cv">
+                <a href="CV/Ian_Christopher_CV.pdf" class="btn download-btn" download>
+                    <i class="fa-solid fa-download"></i> Download CV
+                </a>
+                <a href="mailto:ianchristopherjunio19@gmail.com" class="btn email-btn">
+                    <i class="fa-solid fa-envelope"></i> Send Email
+                </a>
+                <a href="tel:+639150060461" class="btn phone-btn">
+                    <i class="fa-solid fa-phone"></i> Call Me
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- DARK MODE -->
+    <div class="dark-mode-toggle">
+        <input type="checkbox" id="darkModeSwitch">
+        <label for="darkModeSwitch" class="toggle-label">
+            <span class="toggle-ball"></span>
+        </label>
+    </div>
+
+    <!-- GRID -->
+    <div class="grid">
+
+        <!-- LEFT SIDE -->
+        <div class="left-side">
+
+            <!-- ABOUT -->
+            <div class="card">
+                <h2><i class="fa-solid fa-circle-info"></i> About Me</h2>
+                <p style="text-align: justify;">
+                    I am a dedicated IT student with a strong passion for programming and technology. 
+                    I enjoy working on projects that challenge my skills and allow me to create solutions 
+                    that make a difference. I continuously seek to learn and grow in my field.
+                </p>
+            </div>
+
+            <!-- SCHEDULE -->
+            <div id="schedule" class="card">
+                <h2><i class="fa-solid fa-book"></i> MY MAJOR SUBJECT SY.25-26:</h2>
+                <ol type="i" class="major-subjects">
+                    <li>ITE 399</li>
+                    <li>ITE 186</li>
+                    <li>ITE 048</li>
+                </ol>
+
+                <br>
+
+                <h2><i class="fa-solid fa-calendar-days"></i> S.Y. 25-26 2ND SEM. SUBJECTS</h2>
+                <div class="schedule-tabs">
+                    <button class="tab-btn active" onclick="showDay('mon')">Monday</button>
+                    <button class="tab-btn" onclick="showDay('tue')">Tuesday</button>
+                    <button class="tab-btn" onclick="showDay('wed')">Wednesday</button>
+                    <button class="tab-btn" onclick="showDay('thu')">Thursday</button>
+                </div>
+
+                <!-- Schedule Tables -->
+                <div class="schedule-table active" id="mon">
+                    <table>
+                        <tr>
+                            <th>Code</th>
+                            <th>Subject</th>
+                            <th>Time</th>
+                            <th>Room</th>
+                        </tr>
+                        <tr>
+                            <td>ITE 186</td>
+                            <td>Computer Programming 2</td>
+                            <td>3:00 PM - 4:30 PM</td>
+                            <td>ITS-200 - Floor 2</td>
+                        </tr>
+                        <tr>
+                            <td>ITE 399</td>
+                            <td>Human-Computer Interaction 1</td>
+                            <td>4:30 PM - 5:30 PM</td>
+                            <td>PTC-403 - Floor 4</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="schedule-table" id="tue">
+                    <table>
+                        <tr>
+                            <th>Code</th>
+                            <th>Subject</th>
+                            <th>Time</th>
+                            <th>Room</th>
+                        </tr>
+                        <tr>
+                            <td>ITE 048</td>
+                            <td>Discrete Structures</td>
+                            <td>10:30 AM - 12:00 PM</td>
+                            <td>PTC-404 - Floor 4</td>
+                        </tr>
+                        <tr>
+                            <td>ITE 186</td>
+                            <td>Computer Programming 2</td>
+                            <td>3:30 PM - 4:30 PM</td>
+                            <td>PTC-403 - Floor 4</td>
+                        </tr>
+                        <tr>
+                            <td>ITE 399</td>
+                            <td>Human-Computer Interaction 1</td>
+                            <td>4:30 PM - 6:00 PM</td>
+                            <td>ITS-200 - Floor 2</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="schedule-table" id="wed">
+                    <table>
+                        <tr>
+                            <th>Code</th>
+                            <th>Subject</th>
+                            <th>Time</th>
+                            <th>Room</th>
+                        </tr>
+                        <tr>
+                            <td>ITE 186</td>
+                            <td>Computer Programming 2</td>
+                            <td>3:00 PM - 4:30 PM</td>
+                            <td>FLEX LEARNING - Virtual</td>
+                        </tr>
+                        <tr>
+                            <td>ITE 399</td>
+                            <td>Human-Computer Interaction 1</td>
+                            <td>4:30 PM - 5:30 PM</td>
+                            <td>FLEX LEARNING - Virtual</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="schedule-table" id="thu">
+                    <table>
+                        <tr>
+                            <th>Code</th>
+                            <th>Subject</th>
+                            <th>Time</th>
+                            <th>Room</th>
+                        </tr>
+                        <tr>
+                            <td>ITE 048</td>
+                            <td>Discrete Structures</td>
+                            <td>10:30 AM - 12:00 PM</td>
+                            <td>FLEX LEARNING - Virtual</td>
+                        </tr>
+                        <tr>
+                            <td>ITE 186</td>
+                            <td>Computer Programming 2</td>
+                            <td>3:30 PM - 4:30 PM</td>
+                            <td>FLEX LEARNING - Virtual</td>
+                        </tr>
+                        <tr>
+                            <td>ITE 399</td>
+                            <td>Human-Computer Interaction 1</td>
+                            <td>4:30 PM - 6:00 PM</td>
+                            <td>FLEX LEARNING - Virtual</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- My Hobbies -->
+            <div class="bottom-row">
+                <div class="card hobbies">
+                    <h2><i class="fa-solid fa-gamepad"></i> My Hobbies</h2>
+                    <ul>
+                        <li>💻 Learning Programming</li>
+                        <li>🎮 Playing Video Games</li>
+                        <li>🖥️ Customizing Setups</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Tech Stack   -->
+            <div class="card">
+                <h2><i class="fa-solid fa-layer-group"></i> Tech Stack</h2>
+
+                <div class="tech-stack">
+
+                    <div class="tech-item">
+                        <i class="fa-brands fa-html5"></i>
+                        <span>HTML</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <span>CSS (Basic)</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="fa-brands fa-js"></i>
+                        <span>JavaScript (Basic)</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="fa-brands fa-github"></i>
+                        <span>Git & GitHub</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="fa-brands fa-python"></i>
+                        <span>Python</span>
+                    </div>
+
+                    <div class="tech-item">
+                        <i class="fa-brands fa-java"></i>
+                        <span>Java</span>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- SOCIAL LINKS -->
+            <div class="card tech-social-card">
+                <h2><i class="fa-solid fa-share-nodes"></i> Social Links</h2>
+                <div class="tech-social-icons">
+                    <a href="https://github.com/whoisiyann" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/yjunio/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/whoisiyann" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/_whoisiyann?igsh=MWc5NGhsajB1d3JrYw==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="right-side">
+
+            <!-- EXPERIENCE -->
+            <div class="card">
+                <h2><i class="fa-solid fa-briefcase"></i> Experience</h2>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span>December 2024</span>
+                            <h3>Work Immersion Trainee</h3>
+                            <p class="company">Itech Computer Academy Inc.</p>
+                            <ul>
+                                <li>Assembled and disassembled computer parts and components.</li>
+                                <li>Installed and formatted operating systems.</li>
+                                <li>Created and connected LAN cables.</li>
+                                <li>Performed troubleshooting and maintenance.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- EDUCATION -->
+            <div class="card">
+                <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span>2025 - Present</span>
+                            <h3>BS Information Technology</h3>
+                            <p class="company">PHINMA - University of Pangasinan</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span>2023 - 2025</span>
+                            <h3>Senior High School TVL - ICT</h3>
+                            <p class="company">Nalsian-Tomling National High School</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span>2019 - 2023</span>
+                            <h3>Junior High School</h3>
+                            <p class="company">Nalsian-Tomling National High School</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span>2013 - 2019</span>
+                            <h3>Elementary</h3>
+                            <p class="company">Nalsian-Tomling Elementary School</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CERTIFICATES -->
+            <div class="card cert-list">
+                <h2><i class="fa-solid fa-certificate"></i> Certificates</h2>
+                <p><b>TESDA Certified</b></p>
+                <p>NCII HOLDER - Computer Systems Servicing (CSS)</p>
+            </div>
+
+            <!-- Project -->
+            <div class="bottom-row">
+                <div class="card">
+                    <h2><i class="fa-solid fa-laptop-code"></i> Recent Projects</h2>
+                    <div class="projects">
+                        <div class="project">
+                            <h3>Neo Attend</h3>
+                            <p>is a simple GUI system that uses face recognition to record student attendance automatically. 
+                            It helps teachers save time, avoid manual writing, and keep accurate attendance records.</p>
+
+                            <a href="https://github.com/whoisiyann/NeoAttend" target="_blank">https://github.com/whoisiyann/NeoAttend</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> 
+
+    </div> 
+
+<br>
+<br>
+<!-- GALLERY -->
+        <div class="card">
+            <h2><i class="fa-solid fa-images"></i> My Gallery</h2>
+            
+                <!-- BUTTONS -->
+                <button class="gallery-btn prev">&#10094;</button>
+                <button class="gallery-btn next">&#10095;</button>
+
+            <div class="gallery-wrapper">
+
+                <div class="gallery-container">
+                    <div class="gallery">
+
+                        <!-- ORIGINAL IMAGES -->
+                        <div class="gallery-item"><img src="pictures/pic1.png"></div>
+                        <div class="gallery-item"><img src="pictures/pic2.png"></div>
+                        <div class="gallery-item"><img src="pictures/pic3.png"></div>
+                        <div class="gallery-item"><img src="pictures/pic4.png"></div>
+                        <div class="gallery-item"><img src="pictures/pic6.png"></div>
+                        <div class="gallery-item"><img src="pictures/pic7.png"></div>
+                        <div class="gallery-item"><img src="pictures/pic8.png"></div>
+
+                        <!-- DUPLICATE FOR LOOP -->
+                        <div class="gallery-item"><img src="pictures/pic1.png"></div>
+                        <div class="gallery-item"><img src="pictures/pic2.png"></div>
+                        <div class="gallery-item"><img src="pictures/pic3.png"></div>
+                        <div class="gallery-item"><img src="pictures/pic4.png"></div>
+                        <div class="gallery-item"><img src="pictures/pic6.png"></div>
+                        <div class="gallery-item"><img src="pictures/pic7.png"></div>
+                        <div class="gallery-item"><img src="pictures/pic8.png"></div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- SEE MORE BUTTON -->
+        <div class="see-more-container">
+            <a href="https://www.facebook.com/whoisiyann" target="_blank" class="see-more-btn">SEE MORE</a>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

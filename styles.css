@@ -1,0 +1,813 @@
+/* ================= DEFAULT ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ================= BODY DEFAULT ================= */
+body {
+    background: #f5f5f5;
+    color: #111;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 0;
+}
+
+/* ================= HEADER ================= */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.header-info h1 {
+    font-size: 28px;
+}
+
+.header-info p {
+    color: #555;
+    margin: 5px 0;
+}
+
+/* ================= Email & CV ================= */
+.email-cv {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+.email-cv .btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* ================= Download CV Button ================= */
+.email-cv .download-btn {
+    background: #ffffff52;
+    color: #111;
+    border: 2px solid #0000004f;
+
+    background: #111; 
+    color: #fff;
+    border: 2px solid #111111a3;
+}
+
+.email-cv .download-btn:hover {
+    background: #218838;
+    color: #fff;
+    border-color: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(15, 15, 15, 0.716);
+}
+
+.email-cv .btn i {
+    font-size: 16px;
+}
+
+/* ================= Email Button ================= */
+.email-cv .email-btn {
+    background: #ffffff2c;
+    color: #111;
+    border: 2px solid #0000004f;
+}
+
+.email-cv .email-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(15, 15, 15, 0.716);
+}
+
+/* ================= Phone Number Button ================= */
+.email-cv .phone-btn {
+    background: #ffffff52;
+    color: #111;
+    border: 2px solid #0000004f;
+}
+
+.email-cv .phone-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(15, 15, 15, 0.716);
+
+}
+/* ================= DARK MODE BUTTONS ================= */
+body.dark-mode .email-cv .download-btn {
+    background: #1e1e1e;
+    color: #fff; 
+    border-color: #666;
+}
+
+body.dark-mode .download-btn:hover {
+    background: #1fec0490;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.478);
+}
+
+body.dark-mode .email-cv .email-btn {
+    background: #444;     
+    color: #fff;            
+    border-color: #666;
+}
+
+body.dark-mode .email-btn:hover {
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.478);
+}
+
+body.dark-mode .email-cv .phone-btn {
+    background: #444;       
+    color: #fff;          
+    border-color: #666;
+}
+
+body.dark-mode .phone-btn:hover {
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.478);
+}
+
+
+
+/* ================= GRID LAYOUT ================= */
+.grid {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.left-side, .right-side {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+/* ================= BOTTOM ROW ================= */
+.bottom-row {
+    display: flex;
+    gap: 20px;
+}
+
+.bottom-row .card {
+    flex: 1;
+}
+
+/* ================= CARD ================= */
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    color: #111;
+    position: relative;
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* ================= MAJOR SUBJECTS LIST ================= */
+.major-subjects {
+    list-style: lower-roman;
+    margin: 10px 0 20px 20px;
+}
+
+.major-subjects li {
+    background: #eee;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.major-subjects li:hover {
+    background: #ddd;
+    transform: translateX(5px);
+}
+
+/* ================= SCHEDULE ================= */
+.schedule-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    background: #ddd;
+    color: #111;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tab-btn:hover {
+    background: #ccc;
+}
+
+.tab-btn.active {
+    background: #111;
+    color: #fff;
+    font-weight: bold;
+}
+
+.schedule-table {
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.schedule-table.active {
+    display: block;
+}
+
+.schedule-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    color: #111;
+}
+
+.schedule-table th, .schedule-table td {
+    padding: 10px;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.schedule-table th {
+    background: #ccc;
+}
+
+.schedule-table td {
+    border-top: 1px solid #bbb;
+}
+
+.schedule-table tr:hover {
+    background: #918f8fa8;
+}
+
+/* ================= HOBBIES ================= */
+.hobbies ul {
+    list-style: disc inside;
+    margin-top: 10px;
+    padding-left: 25px;
+}
+
+.hobbies ul li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #eee;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.hobbies ul li:hover {
+    background: #ddd;
+    transform: translateX(5px);
+}
+
+/* ================= TECH STACK DESIGN ================= */
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.tech-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background: #f0f0f0;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: 0.3s ease;
+    cursor: default;
+}
+
+.tech-item i {
+    font-size: 20px;
+}
+
+.tech-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(4, 4, 4, 0.967);
+}
+
+/* ================= TECH SOCIAL CARD ================= */
+.tech-social-card {
+    margin-top: 0px;
+    padding: 20px;
+    text-align: center;
+}
+
+.tech-social-card h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.tech-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tech-social-icons a {
+    font-size: 22px;
+    color: #111;
+    transition: 0.3s;
+}
+
+.tech-social-icons a:hover {
+    transform: translateY(-4px);
+    color: #524f4f;
+}
+
+/* Dark mode */
+body.dark-mode .tech-social-card {
+    background: #222;
+    color: #fff;
+}
+
+body.dark-mode .tech-social-icons a {
+    color: #fff;
+}
+
+body.dark-mode .tech-social-icons a:hover {
+    color: #ccc;
+}
+
+/* ================= SEE MORE BUTTON ================= */
+.see-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.see-more-btn {
+    padding: 10px 20px;
+    background: #111;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.see-more-btn:hover {
+    background: #333;
+}
+
+/* ================= PROJECTS ================= */
+.projects {
+    display: grid;
+    gap: 15px;
+}
+
+.project {
+    background: #eee;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.project h3 {
+    margin-bottom: 8px;
+}
+
+.project p {
+    text-align: justify;
+}
+
+/* ================= GITHUB LINK ================= */
+.project a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #24292e; 
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.project a:hover {
+    background: #0366d6; 
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+/* ================= TIMELINE ================= */
+.timeline-item {
+    position: relative;
+    margin-bottom: 20px;
+    border-left: 2px solid #bbb;
+    padding-left: 15px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -8.7px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    background: #111;
+    border-radius: 50%;
+}
+
+.timeline-content span {
+    font-size: 13px;
+    color: #777;
+}
+
+.timeline-content h3 {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.timeline-content .company {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.timeline-item p, .timeline-item ul {
+    color: #444;
+    font-size: 14px;
+}
+
+.timeline-item ul {
+    margin-top: 10px;
+    margin-left: 20px;
+    list-style: disc;
+}
+
+.timeline-item ul li {
+    padding: 5px 0;
+}
+
+/* ================= GALLERY ================= */
+.gallery-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.gallery-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    padding-top: 20px;
+}
+
+.gallery {
+    display: flex;
+    gap: 5px;
+    align-items: flex-start;
+    will-change: transform;
+}
+
+.gallery-item {
+    width: 220px;
+    height: 280px;
+    border-radius: 16px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 8px 20px rgba(235, 230, 230, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.08) translateY(-10px) rotateZ(0.5deg);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.25);
+    z-index: 50;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* ================= GALLERY BUTTONS ================= */
+.gallery-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    border: none;
+    padding: 12px 16px;
+    font-size: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.gallery-btn.prev { left: -50px; }
+.gallery-btn.next { right: -50px; }
+
+.gallery-btn:hover {
+    background: rgba(0,0,0,0.9);
+}
+
+/* ================= DARK MODE ================= */
+body.dark-mode {
+    background: #0f0f0f;
+    color: #fff;
+}
+
+body.dark-mode .header-info p {
+    color: #c2bfbf;
+}
+
+body.dark-mode .header-info i {
+    color: #c2bfbf;
+}
+
+body.dark-mode .card,
+body.dark-mode .major-subjects li,
+body.dark-mode .hobbies ul li,
+body.dark-mode .project {
+    background: #222;
+    color: #fff;
+}
+
+body.dark-mode .major-subjects li {
+    background: #333;       
+    color: #fff;             
+}
+
+body.dark-mode .major-subjects li:hover {
+    background: #444;        
+}
+
+body.dark-mode .hobbies ul li {
+    background: #333;
+    color: #fff;
+}
+
+body.dark-mode .hobbies ul li:hover {
+    background: #444;
+}
+
+body.dark-mode .see-more-btn {
+    background: #fff;
+    color: #000;
+}
+
+body.dark-mode .see-more-btn:hover {
+    background: #ddd;
+}
+
+body.dark-mode .schedule-table table {
+    background: #222;
+    color: #fff;
+}
+
+body.dark-mode .schedule-table th {
+    background: #333;
+}
+
+body.dark-mode .schedule-table td {
+    border-top: 1px solid #444;
+}
+
+body.dark-mode .tech-item {
+    background: #1e1e1e;
+    color: #fff;
+}
+
+body.dark-mode .tech-item:hover {
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.478);
+}
+
+
+body.dark-mode .timeline-dot { background: #fff; }
+body.dark-mode .timeline-content span { color: #aaa; }
+body.dark-mode .timeline-content .company { color: #ccc; }
+body.dark-mode .timeline-item p,
+body.dark-mode .timeline-item ul,
+body.dark-mode .timeline-item ul li { color: #ccc; }
+
+body.dark-mode .tab-btn {
+    background: #2a2a2a;
+    color: #fff;
+}
+
+body.dark-mode .tab-btn:hover { background: #444; }
+body.dark-mode .tab-btn.active { background: #fff; color: #111; font-weight: bold; }
+
+body.dark-mode .gallery-item { background: #222; }
+body.dark-mode .gallery-item:hover { background: #333; }
+body.dark-mode .gallery-btn { background: rgba(255,255,255,0.7); color: #000; }
+body.dark-mode .gallery-btn:hover { background: rgba(255,255,255,0.9); }
+
+body.dark-mode .project {
+    background: #333;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* ================= NeoAttend GITHUB LINK ================= */
+body.dark-mode .project a {
+    background: #fff; 
+    color: #24292e;         
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); 
+}
+
+body.dark-mode .project a:hover {
+    background: #549bec;    
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* ================= DARK MODE TOGGLE ================= */
+.dark-mode-toggle { 
+    position: fixed; 
+    top: 20px; 
+    right: calc((100% - 1260px)/2 + 30px);
+    z-index: 1000; 
+}
+
+@media(max-width: 1200px) {
+    .dark-mode-toggle {
+        right: 30px;
+    }
+}
+
+#darkModeSwitch { display: none; }
+.toggle-label {
+    display: block;
+    width: 50px;
+    height: 26px;
+    background: #111;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.toggle-ball {
+    width: 22px;
+    height: 22px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: 0.3s;
+}
+#darkModeSwitch:checked + .toggle-label { background: #fff; }
+#darkModeSwitch:checked + .toggle-label .toggle-ball { left: 26px; background: #000; }
+
+/* ================= PROFILE PICTURE ================= */
+.profile-pic {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease;
+}
+
+.profile-pic img.default { opacity: 1; z-index: 1; }
+.profile-pic img.hover,
+.profile-pic img.click { opacity: 0; z-index: 2; }
+.profile-pic:hover img.default { opacity: 0; }
+.profile-pic:hover img.hover { opacity: 1; }
+
+/* ================= RESPONSIVE ================= */
+@media(max-width: 900px) {
+    .grid, .bottom-row { flex-direction: column; }
+}
+@media(max-width: 600px) {
+    .gallery-btn.prev { left: 5px; }
+    .gallery-btn.next { right: 5px; }
+}
+
+/* ================= RESPONSIVE TABLE ================= */
+.schedule-table {
+    width: 100%;
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch; 
+}
+
+.schedule-table table {
+    width: 100%;
+    min-width: 600px; 
+    border-collapse: collapse;
+}
+
+.schedule-table th, .schedule-table td {
+    padding: 8px 12px;
+    font-size: 14px;
+    white-space: nowrap;
+    text-align: left;
+    word-wrap: break-word; 
+}
+
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes autoSlide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* ========== Mobile adjustments ==========*/
+@media (max-width: 900px) {
+    .schedule-table table {
+        min-width: 100%; 
+        font-size: 13px;
+    }
+
+    .schedule-table th, .schedule-table td {
+        white-space: normal; 
+        padding: 6px 8px;
+    }
+}
+
+@media (max-width: 600px) {
+    .schedule-table table {
+        font-size: 12px;
+    }
+
+    .schedule-table th, .schedule-table td {
+        padding: 4px 6px;
+    }
+}
+
+
+/* ========== HEADER FOR MOBILE =========== */
+@media (max-width: 700px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .header-info h1 {
+        font-size: 20px; 
+        line-height: 1.2; 
+        word-break: break-word; 
+    }
+
+    .header-info p {
+        font-size: 14px; 
+    }
+
+    .profile-pic {
+        width: 100px;  
+        height: 100px;
+    }
+}
