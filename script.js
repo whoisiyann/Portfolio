@@ -1,3 +1,4 @@
+// Day Schedule
 function showDay(day){
     let tables = document.querySelectorAll(".schedule-table");
     let buttons = document.querySelectorAll(".tab-btn");
@@ -15,7 +16,7 @@ darkModeSwitch.addEventListener('change', () => {
     document.body.classList.toggle('dark-mode');
 });
 
-
+// Profile
 const profilePic = document.getElementById('profilePic');
 let clicked = false;
 
@@ -57,6 +58,7 @@ profilePic.addEventListener('click', () => {
     }
 });
 
+// Gallery
 const gallery = document.querySelector('.gallery');
 const wrapper = document.querySelector('.gallery-wrapper');
 const prevBtn = document.querySelector('.gallery-btn.prev');
